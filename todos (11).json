@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "content": "关卡一（原料引力场）添加鼓励文案和交互反馈",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "2",
+    "content": "关卡二（去边魔术秀）添加鼓励文案和交互反馈",
+    "status": "in_progress",
+    "priority": "high"
+  },
+  {
+    "id": "3",
+    "content": "关卡三（烘焙流水线）添加鼓励文案和交互反馈",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": "4",
+    "content": "关卡四（分享工厂狂欢）添加鼓励文案和交互反馈",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": "5",
+    "content": "验证所有修改",
+    "status": "pending",
+    "priority": "medium"
+  }
+]

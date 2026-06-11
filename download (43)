@@ -1,0 +1,16 @@
+export default defineAppConfig({
+  pages: [
+    'pages/index/index',
+    'pages/game/index',
+    'pages/level1/index',
+    'pages/level2/index',
+    'pages/level3/index',
+    'pages/result/index'
+  ],
+  window: {
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#FFE9C7',
+    navigationBarTitleText: '豪士藜麦吐司',
+    navigationBarTextStyle: 'black'
+  }
+})

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "content": "分析项目结构，识别小程序特有 API 和组件",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "2",
+    "content": "修改配置文件适配纯 H5 模式（移除小程序依赖）",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "3",
+    "content": "处理小程序特有 API 的兼容性（Taro.getEnv 判断）",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "4",
+    "content": "验证 H5 构建并测试",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "5",
+    "content": "优化 Vercel 部署配置",
+    "status": "completed",
+    "priority": "medium"
+  }
+]

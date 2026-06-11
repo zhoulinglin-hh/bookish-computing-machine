@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "content": "首页豪士logo居中在横页的50%处",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "2",
+    "content": "选择关卡标题居中",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "3",
+    "content": "收集进度标题居中",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "4",
+    "content": "关卡一气泡下落速度慢50%",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "5",
+    "content": "关卡2、3、4的关卡介绍词大小位置和关卡一保持一致",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "6",
+    "content": "关卡三回退阻尼速度加快0.5-1倍",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "7",
+    "content": "关卡三包装进度到0%时全屏灰色并显示失败",
+    "status": "completed",
+    "priority": "high"
+  },
+  {
+    "id": "8",
+    "content": "验证所有修改",
+    "status": "completed",
+    "priority": "high"
+  }
+]

@@ -1,0 +1,201 @@
+/* stylelint-disable selector-type-no-unknown */
+/* stylelint-disable at-rule-no-unknown */
+@import url('weapp-tailwindcss');
+@config "../tailwind.config.js";
+
+/* 小程序页面容器高度设置，确保垂直居中生效 */
+page {
+  height: 100%;
+}
+
+/* 首页 tips 滚动动画。@keyframes 无法写进 inline style，统一放到全局样式。 */
+@keyframes loading-tips-scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-220px); /* 5 items * 44px = 220px */
+  }
+}
+
+/* 豪士藜麦吐司主题动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.02); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+@keyframes fall {
+  from { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slogan-bounce {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-8px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-4px); }
+}
+
+@keyframes energy-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 198, 92, 0.7); }
+  50% { box-shadow: 0 0 20px 10px rgba(255, 198, 92, 0); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* 性能优化动画 - 使用GPU加速 */
+@keyframes float-gpu {
+  0%, 100% { transform: translateY(0px) translateZ(0); }
+  50% { transform: translateY(-10px) translateZ(0); }
+}
+
+@keyframes bounce-soft-gpu {
+  0%, 100% { transform: translateY(0) scale(1) translateZ(0); }
+  50% { transform: translateY(-15px) scale(1.02) translateZ(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1) translateZ(0); }
+  50% { opacity: 1; transform: scale(1.2) translateZ(0); }
+}
+
+@keyframes conveyor-move {
+  0% { transform: translateX(0) translateZ(0); }
+  100% { transform: translateX(-20px) translateZ(0); }
+}
+
+/* 流水线动画 */
+@keyframes stage-active {
+  0%, 100% { transform: scale(1) translateZ(0); box-shadow: 0 0 0 0 rgba(233,111,77,0.4); }
+  50% { transform: scale(1.05) translateZ(0); box-shadow: 0 0 20px 10px rgba(233,111,77,0); }
+}
+
+@keyframes progress-fill {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* 减少动画性能消耗 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 通用语义色 token，可通过 Tailwind 工具类（bg-primary / text-foreground 等）使用 */
+:root,
+page {
+  /* 豪士藜麦吐司主题色 */
+  --background: #FFF8F0;
+  --foreground: #5E3A2B;
+  --card: #ffffff;
+  --card-foreground: #5E3A2B;
+  --popover: #ffffff;
+  --popover-foreground: #5E3A2B;
+
+  /* 主色调：温暖麦黄 + 藜麦红 */
+  --primary: #E96F4D;
+  --primary-foreground: #ffffff;
+  --secondary: #C7E9D0;
+  --secondary-foreground: #5E3A2B;
+  --muted: #F5E2D1;
+  --muted-foreground: #A27B64;
+  --accent: #FFE9C7;
+  --accent-foreground: #5E3A2B;
+  --destructive: #dc2626;
+  --destructive-foreground: #fef2f2;
+  --border: #E8D5C4;
+  --input: #E8D5C4;
+  --ring: #E96F4D;
+  --radius: 16px;
+  --wechat: #07c160;
+
+  /* 游戏专用色 */
+  --wheat-yellow: #FFE9C7;
+  --quinoa-red: #E96F4D;
+  --cream-green: #C7E9D0;
+  --cream-white: #FFF8F0;
+  --gold: #FFC65C;
+  --dark-brown: #5E3A2B;
+  --light-brown: #A27B64;
+
+  /* Tailwind v4 运行时变量（shadow / ring 工具类依赖） */
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-color: initial;
+  --tw-shadow-alpha: 100%;
+  --tw-inset-shadow: 0 0 #0000;
+  --tw-inset-shadow-color: initial;
+  --tw-inset-shadow-alpha: 100%;
+  --tw-ring-color: initial;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-inset-ring-color: initial;
+  --tw-inset-ring-shadow: 0 0 #0000;
+  --tw-ring-inset: initial;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-wechat: var(--wechat);
+  --color-wheat-yellow: var(--wheat-yellow);
+  --color-quinoa-red: var(--quinoa-red);
+  --color-cream-green: var(--cream-green);
+  --color-gold: var(--gold);
+  --color-dark-brown: var(--dark-brown);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
